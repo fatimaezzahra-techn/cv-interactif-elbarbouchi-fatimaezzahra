@@ -1,0 +1,576 @@
+body{
+    margin:0;
+    padding:0;
+    background:linear-gradient(black, #7e164a);
+    color:antiquewhite;
+    flex-direction: column;
+
+}
+.menu{
+    position:relative;
+    text-align: center;
+    max-width:100%; 
+background-color: rgb(197, 197, 180);
+
+}
+nav {
+    text-align: center;
+    font-size: 20%;
+    position: relative;
+}
+a{
+    color:rgb(160, 48, 85);
+    font-size: 30px;
+    text-align: center;
+    padding :20px;
+    animation: underline 1.5s ease forwards;
+}
+ul{
+    display:flex;
+    justify-content: space-around;
+    opacity: 1;
+}
+nav li{
+    display:fixed;
+     animation: underline 1.5s ease forwards;
+     opacity: 1;   
+}
+.profil-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 100px;
+    gap: 20px;
+}
+
+.profil {
+    padding: 40px;
+    margin:  0;
+    border-radius: 12px;
+      animation: slideUpProfil 1.6s ease forwards;
+}
+.fati-profil h2{
+    color:rgba(245, 245, 220, 0.938);
+    background-color: #7c063d;
+    
+}
+.photo-container {
+    width: 40%;
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    padding:10px;
+    margin:40px;
+}
+.maPhoto{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid rgb(160, 48, 85);
+    box-shadow: 0 8px 25px rgba(238, 24, 95, 0.822);  
+}
+.maPhoto:hover{
+    transform: scaleY(2);
+}
+
+.fati-profil p{
+ font-size: 1.05em;
+    line-height: 1.8;
+  background-color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(197, 197, 180);
+}
+    .fati-profil:hover {
+    transform: scaleX(1.02);
+    transition: 3s ease;
+    box-shadow: 0 8px 25px rgba(238, 24, 95, 0.822);
+}
+
+.fati-competance:hover{
+    transform: translateY(30px);
+    animation: fadeInUp 1.5s ease-in-out forwards;
+   
+}
+.fati-competance h2{
+    color:#a03055;
+    font-display:inline ;
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.fati-competance {
+    animation: slideIn 1.5s ease;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }}
+.fati-competance ul li {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+    display: inline;
+}
+.li:hover{
+    transform: scale(1.05);
+}
+
+.fati-competance ul li:nth-child(1) { animation-delay: 1s; }
+.fati-competance ul li:nth-child(2) { animation-delay: 1.5s; }
+.fati-competance ul li:nth-child(3) { animation-delay: 2s; }
+.fati-competance ul li:nth-child(4) { animation-delay: 2.5s; }
+.fati-competance ul li:nth-child(5) { animation-delay: 3s; }
+.fati-competance ul li:nth-child(6) { animation-delay: 3.5s; }
+.fati-competance ul li:nth-child(7) { animation-delay: 4s; }
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.fati-competance li::before {
+    content: "•";
+    margin-right: 8px;
+    color: rgb(160, 48, 85);;
+    font-size: 20px;
+    display: inline-block;
+    transform: scale(0);
+    animation: bulletPop 0.6s ease forwards;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+@keyframes bulletPop {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+/* ----- SECTION EXPERIENCES ----- */
+.experiences {
+    width: 50%;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.fati-experience {
+    background:rgb(197, 197, 180);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(197, 229, 248, 0.842);
+    animation: slideUp 4.5s ease-out forwards;
+    opacity: 0; /* pour l'animation, mais devient 1 après */
+    transition: all 0.5s ease;
+}
+
+/* Titre avec soulignement animé */
+.fati-experience h2 {
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    animation: fadeIn 1.5s ease forwards;
+    color:#a03055;
+}
+
+.fati-experience h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background-color: #a03055;
+    animation: underline 4s ease forwards;
+    border-radius: 2px;
+}
+.fati-experience:hover{
+    transform:translateX(3x);
+    transition: all 0.5s ease;
+
+}
+
+/* Texte */
+.fati-experience p {
+    font-size: 17px;
+    margin: 10px 0;
+    animation: fadeIn 1.5s ease forwards;
+    color:black;
+}
+
+/* ---- ANIMATIONS ---- */
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes underline {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+/* ---- SECTION EDUCATION ---- */
+.education{
+ 
+   width: 55%;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: rgb(197, 197, 180);
+    box-shadow: 0 6px 15px rgba(148, 3, 82, 0.932);
+     transition: all 0.5s ease;
+     justify-content: center;
+     display: flex;
+     text-align: left;
+      animation: pulser 3s ease-in-out infinite;
+}
+
+
+/* Titre */
+.fati-education h2 {
+       background-color: #a03055;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(161, 2, 63, 0.1);
+    animation: slideUp 4.5s ease-out forwards;
+    opacity: 0; /* pour l'animation, mais devient 1 après */
+    transition: all 5s ease;
+}
+
+/* Dates */
+.fati-education .date {
+    font-weight: bold;
+    background-color: #1d1b1b;
+    margin: 15px 0 5px 0;
+    font-size: 16px;
+    color:#a03055;
+    transform:rotateY(180deg);}
+
+
+/* Paragraphes */
+.fati-education p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color:black;
+}
+
+/* Listes */
+.fati-education ul {
+    margin-left: 5px;
+    margin-bottom: 15px;
+}
+
+.fati-education ul li {
+    list-style: disc;
+    margin-bottom: 5px;
+    animation-delay: 2s;
+    border-color: #a03055;
+    color:#a03055;
+    display: inline;
+    text-decoration: dotted ;
+}
+
+/* --- Animations --- */
+.fati-education p, .fati-education ul, .fati-education .date {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUpEducation 0.8s ease forwards;
+}
+
+/* Animation delay automatique pour chaque élément */
+.fati-education p:nth-of-type(1) { animation-delay: 0.2s; }
+.fati-education p:nth-of-type(2) { animation-delay: 0.4s; }
+.fati-education p:nth-of-type(3) { animation-delay: 0.6s; }
+.fati-education ul { animation-delay: 0.8s; }
+.fati-education .date:nth-of-type(1) { animation-delay: 1s; }
+.fati-education .date:nth-of-type(2) { animation-delay: 1.2s; }
+.fati-education .date:nth-of-type(3) { animation-delay: 1.4s; }
+
+@keyframes slideUpEducation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Effet hover sur paragraphe pour interactivité */
+.fati-education p:hover {
+    transform: translateY(5px);
+    transition: 0.3s ease;
+    justify-content: left;
+
+}
+
+
+
+.languages{
+    display:flex;
+    justify-content:right;
+    margin: 40px 0;
+}
+
+.languages-box {
+     background:linear-gradient( rgba(128, 128, 128, 0.76), #a03055);
+    color: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+   box-shadow: 0 6px 15px rgba(29, 2, 17, 0.932);
+    width: 100%;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.languages-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.languages-box h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: rgb(209, 97, 135);
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+.languages-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.languages-box ul li {
+    background: rgba(238, 16, 127, 0.493);
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateX(-50px);
+    opacity: 0;
+    animation: slideIn 0.8s forwards;
+}
+
+.languages-box ul li:nth-child(1) { animation-delay: 0.5s; }
+.languages-box ul li:nth-child(2) { animation-delay: 1s; }
+.languages-box ul li:nth-child(3) { animation-delay: 1.5s; }
+.languages-box ul li:nth-child(4) { animation-delay: 2s; }
+
+.languages-box ul li:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+} 
+.projects-section {
+    padding: 40px;
+    background-color: #f1d7e3;
+    border-radius: 15px;
+    margin: 40px;
+    animation: fadeInUp 1s ease;
+    color:#1d1b1b;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.projects-section h2 {
+    text-align: center;
+    color: #a03055;
+    margin-bottom: 20px;
+}
+.projects-section p {
+    text-align: center;
+    color:white;
+    margin-bottom: 20px;
+}
+.projects-section a{
+    color:white;
+}
+
+
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.project-card {
+     background:linear-gradient( rgba(128, 128, 128, 0.76), #a03055);
+
+    width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.contact-section {
+    width:100%;
+    padding: 20px;
+
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(170, 22, 67, 0.1);
+    justify-content: center;
+    text-align: left;
+     background-color: rgb(197, 197, 180);
+     transform: perspective(1000px);
+}
+
+.contact-section h2 {
+    color:#a03055;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-decoration: underline;
+    border-bottom: #a03055;
+}
+.contact-item {
+    color:black;
+
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+}
+
+.contact-item i {
+    font-size: 18px;
+    color:#a03055; /* Couleur des icônes */
+}
+
+.contact-link {
+    color:#a03055;
+    text-decoration: none;
+    transition: color 1s ease; /* Effet de transition pour l'interactivité */
+}
+
+.contact-link:hover {
+    color: #7c063d; /* Changement de couleur au survol */
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-link {
+    padding: 8px 12px;
+    background-color:#a03055;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Effets interactifs */
+}
+
+.social-link:hover {
+    background-color:#7c063d;
+    transform: scale(1.05); /* Légère animation au survol */
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .contact-info {
+        gap: 8px;
+    }
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* ----- Bouton menu mobile ----- */
+.toggle-menu {
+    font-size: 35px;
+    cursor: pointer;
+    display: none;
+    padding: 10px;
+    color: rgb(160, 48, 85);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: rgb(197,197,180);
+        padding: 20px;
+    }
+
+    .menu.open nav ul {
+        display: flex;
+    }
+
+    .toggle-menu {
+        display: block;
+    }
+}
+
+/* Lien actif */
+nav a.active {
+    color: #a03055;
+    font-weight: bold;
+    text-decoration: underline;
+}
